@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emag Products</title>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            background-color: green;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            background-color: red;
+        }
+        th {
+            background-color: green;
+        }
+        #logo_img_id {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            z-index: -9999;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: black;" onclick="firstFunction()" id="titleId">Available Products</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Store</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.name }}</td>
+            <td>{{ row.price }}</td>
+            <td>{{ row.store }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Logo_eMAG_%282019%29.svg/2560px-Logo_eMAG_%282019%29.svg.png" alt="Emag Logo"  id="logo_img_id">
+
+</body>
+</html>
