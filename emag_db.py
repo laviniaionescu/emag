@@ -19,15 +19,6 @@ def read_admins(config: dict, table: str = "emag.emag_admin"):
             return users
 
 
-
-
-
-
-
-
-
-
-
 def read_products(config: dict, table: str = "emag.products"):
     with ps.connect(**config) as conn:
         with conn.cursor() as cursor:
