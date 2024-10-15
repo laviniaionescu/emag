@@ -1,0 +1,21 @@
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    background-color: green;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    background-color: red;
+}
+th {
+    background-color: purple;
+}
+
+#button2:hover {
+  background-color: blue;
+  color: pink;
+}
